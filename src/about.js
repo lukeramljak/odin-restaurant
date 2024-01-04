@@ -41,8 +41,8 @@ export const addAboutContent = () => {
   aboutUsData.forEach((item) => {
     const section = document.createElement("section");
     const h2 = document.createElement("h2");
-    section.appendChild(h2);
     h2.textContent = item.section;
+    section.appendChild(h2);
     const p = document.createElement("p");
 
     if (Array.isArray(item.members)) {
