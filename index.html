@@ -4,18 +4,31 @@
     <title>Restaurant</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="./bundle.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/1b99563ec5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <a href="#">Ramen House</a>
+      <a href="#" class="logo"><img src="/src/assets/logo.png" /></a>
       <nav>
         <ul>
-          <li><a href="#" id="home">Home</a></li>
-          <li><a href="#" id="menu">Menu</a></li>
-          <li><a href="#" id="about">About</a></li>
+          <li>
+            <i class="fa-solid fa-house"></i><a href="#" id="home">Home</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-book-open"></i><a href="#" id="menu">Menu</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-question"></i
+            ><a href="#" id="about">About</a>
+          </li>
         </ul>
       </nav>
+      <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
     </header>
     <div id="content"></div>
   </body>
