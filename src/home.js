@@ -17,14 +17,12 @@ export const addHomeContent = () => {
 
   const img = document.createElement("img");
   img.src = Image;
-  contentDiv.appendChild(img);
+  img.className = "hero";
 
   const btn = document.createElement("button");
   btn.textContent = "Place Order";
   containerDiv.appendChild(btn);
 
   contentDiv.appendChild(containerDiv);
-
-  contentDiv.style.display = "flex";
-  contentDiv.style.justifyContent = "space-between";
+  contentDiv.appendChild(img);
 };

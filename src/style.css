@@ -3,7 +3,8 @@
 *::after {
   box-sizing: border-box;
 }
-* * {
+
+* {
   margin: 0;
 }
 
@@ -87,6 +88,10 @@ a {
   text-decoration: none;
   text-transform: uppercase;
 
+  & i {
+    margin-right: 8px;
+  }
+
   &:hover {
     color: var(--clr-text-dark);
   }
@@ -100,5 +105,65 @@ a {
   &:hover {
     color: var(--clr-text);
     background: var(--clr-text-light);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  outline: 2px solid var(--clr-text);
+}
+
+.card .title {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.price::before {
+  content: "$";
+}
+
+.img-container {
+  height: 360px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: var(--clr-text);
+  color: var(--clr-background);
+  border-radius: 12px;
+  margin-top: auto;
+  font-weight: bold;
+
+  &:hover {
+    background: var(--clr-text-dark);
   }
 }

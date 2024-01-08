@@ -2,7 +2,7 @@ import { addAboutContent } from "./about";
 import { addHomeContent } from "./home";
 import { addMenuContent } from "./menu";
 
-addHomeContent();
+addMenuContent();
 
 const home = document.getElementById("home");
 const menu = document.getElementById("menu");
