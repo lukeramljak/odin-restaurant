@@ -6,13 +6,15 @@ export const aboutUsData = [
   },
   {
     section: "Meet the Team",
-    members: [
+    content: [
       {
+        image: "/src/assets/about/jouwen-wang-5-u7C5gy8r4-unsplash.jpg",
         name: "Chef Hiroshi Tanaka",
         role: "Head Chef",
         bio: "With over two decades of experience perfecting the art of ramen, Chef Hiroshi Tanaka brings his expertise and creativity to our kitchen. His dedication to using only the finest ingredients and time-honored techniques ensures that every bowl surpasses expectations.",
       },
       {
+        image: "/src/assets/about/pexels-maksim-goncharenok-5506098.jpg",
         name: "Sakura Yamamoto",
         role: "Managing Partner",
         bio: "As the heart and soul behind our ramen shop, Sakura Yamamoto is passionate about creating a welcoming and memorable dining experience. Her vision is to share the authentic flavors of Japan while fostering a sense of community within our cozy establishment.",
@@ -26,7 +28,7 @@ export const aboutUsData = [
   },
   {
     section: "Contact Us",
-    contact: {
+    content: {
       email: "info@ramenhouse.com",
       phone: "+81 90-1234-5678",
       address: "123 Ramen Street, Cityville, Japan",

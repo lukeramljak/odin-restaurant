@@ -4,43 +4,44 @@ export const addAboutContent = () => {
   const contentDiv = document.getElementById("content");
   contentDiv.innerHTML = "";
 
-  aboutUsData.forEach((item) => {
-    const section = document.createElement("section");
-    const h2 = document.createElement("h2");
-    h2.textContent = item.section;
-    section.appendChild(h2);
-    const p = document.createElement("p");
+  const container = document.createElement("div");
+  container.className = "about-container";
 
-    if (Array.isArray(item.members)) {
-      item.members.forEach((member) => {
-        const article = document.createElement("article");
-        const name = document.createElement("h3");
-        name.textContent = member.name;
-        const role = document.createElement("p");
-        role.textContent = member.role;
-        const bio = document.createElement("p");
-        bio.textContent = member.bio;
-        article.appendChild(name);
-        article.appendChild(role);
-        article.appendChild(bio);
-        section.appendChild(article);
-      });
-    } else if (item.contact) {
-      const list = document.createElement("ul");
-      const email = document.createElement("li");
-      email.textContent = item.contact.email;
-      list.appendChild(email);
-      const phone = document.createElement("li");
-      phone.textContent = item.contact.phone;
-      list.appendChild(phone);
-      const address = document.createElement("li");
-      address.textContent = item.contact.address;
-      list.appendChild(address);
-      section.appendChild(list);
-    } else {
-      p.textContent = item.content;
-      section.appendChild(p);
-    }
-    contentDiv.appendChild(section);
+  aboutUsData.forEach((i) => {
+    container.innerHTML += `
+    <section>
+      <h2>${i.section}</h2>
+      ${renderContent(i.content)}
+    </section>`;
   });
+
+  contentDiv.appendChild(container);
+
+  function renderContent(content) {
+    if (typeof content === "string") {
+      return `<p>${content}</p>`;
+    } else if (Array.isArray(content)) {
+      return content
+        .map(
+          (item) => `
+          <article>
+            <img src="${item.image}" />
+              <div>
+                <h3>${item.name}</h3>
+                <p><strong>${item.role}</strong></p>
+                <p>${item.bio}</p>
+              </div>
+          </article>
+          `,
+        )
+        .join("");
+    } else if (typeof content === "object") {
+      return `
+      <p>Email: <a href="mailto:${content.email}">${content.email}</a></p>
+      <p>Phone: <a href="tel:${content.phone}">${content.phone}</a></p>
+      <p>Address: ${content.address}</p>
+    `;
+    }
+    return "";
+  }
 };
