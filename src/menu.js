@@ -8,32 +8,20 @@ export const addMenuContent = () => {
   h1.textContent = "Menu";
   contentDiv.appendChild(h1);
 
-  const cardContainer = document.createElement("div");
-  cardContainer.className = "card-container";
-  contentDiv.appendChild(cardContainer);
+  const container = document.createElement("div");
+  container.className = "menu-container";
 
-  menuItems.forEach((item) => {
-    const card = document.createElement("div");
-    const img = document.createElement("div");
-    const title = document.createElement("h2");
-    const description = document.createElement("p");
-    const price = document.createElement("p");
-    const btn = document.createElement("button");
-
-    card.className = "card";
-    img.className = "img-container";
-    title.className = "title";
-    description.className = "description";
-    price.className = "price";
-    btn.className = "btn";
-
-    title.textContent = item.name;
-    description.textContent = item.description;
-    price.textContent = item.price;
-    btn.textContent = "Add To Cart";
-
-    img.style.background = `url(${item.image}) center / cover`;
-    card.append(img, title, description, price, btn);
-    cardContainer.appendChild(card);
+  menuItems.forEach((i) => {
+    container.innerHTML += `
+      <div class="card">
+        <img class="menu-img" src="${i.image}" />
+        <h2 class="title">${i.name}</h2>
+        <p>${i.description}</p>
+        <p class="price">${i.price}</p>
+        <button class="btn">Add To Cart</button>
+      </div>
+    `;
   });
+
+  contentDiv.appendChild(container);
 };

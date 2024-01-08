@@ -118,7 +118,7 @@ a {
   padding: 2rem;
 }
 
-.card-container {
+.menu-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
@@ -137,6 +137,13 @@ a {
   outline: 2px solid var(--clr-text);
 }
 
+.menu-img {
+  height: 360px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
 .card .title {
   font-size: 2rem;
   line-height: 1.1;
@@ -149,12 +156,6 @@ a {
 
 .price::before {
   content: "$";
-}
-
-.img-container {
-  height: 360px;
-  border-radius: 12px;
-  margin-bottom: 1rem;
 }
 
 .btn {
@@ -193,7 +194,7 @@ a {
   margin-bottom: 1rem;
 }
 
-article img {
+.about-container img {
   height: 240px;
   border-radius: 12px;
 }
