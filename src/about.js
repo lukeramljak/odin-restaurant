@@ -15,14 +15,14 @@ export const addAboutContent = () => {
     </div>
   </div>
 
-  <div class="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
+  <div class="grid gap-10 sm:px-10 md:grid-cols-2 md:gap-16">
     <div class="flex flex-col items-center space-y-4">
       <img
         src="/src/assets/about/jouwen-wang-5-u7C5gy8r4-unsplash.jpg"
         width="100"
         height="100"
         alt="Chef Hiroshi"
-        class="w-24 h-24 rounded-full object-cover"
+        class="h-24 w-24 rounded-full object-cover"
         style="aspect-ratio: 100 / 100; object-fit: cover;"
       />
       <div class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm">Head Chef</div>
@@ -40,7 +40,7 @@ export const addAboutContent = () => {
         width="100"
         height="100"
         alt="Yuki Tanaka"
-        class="w-24 h-24 rounded-full object-cover"
+        class="h-24 w-24 rounded-full object-cover"
         style="aspect-ratio: 100 / 100; object-fit: cover;"
       />
       <div class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm">

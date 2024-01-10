@@ -3,7 +3,7 @@ export const addHomeContent = () => {
   contentDiv.innerHTML = "";
 
   contentDiv.innerHTML = `
-    <section class="max-w-6xl m-auto py-6 sm:py-16">
+    <section class="m-auto max-w-6xl py-6 sm:py-16">
       <div class="px-4 md:px-6">
         <div
           class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]"
@@ -15,7 +15,7 @@ export const addHomeContent = () => {
             alt="Hero"
             class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
           />
-          <div class="flex flex-col justify-center space-y-4">
+          <div class="flex flex-col justify-center space-y-4 ">
             <div class="space-y-2">
               <h1
                 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"

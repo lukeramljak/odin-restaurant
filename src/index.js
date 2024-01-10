@@ -3,7 +3,7 @@ import { addHomeContent } from "./home";
 import { addMenuContent } from "./menu";
 import { addContactContent } from "./contact";
 
-addContactContent();
+addHomeContent();
 
 const logo = document.getElementById("logo");
 const home = document.getElementById("home");
