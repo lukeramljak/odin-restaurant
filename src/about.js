@@ -66,6 +66,7 @@ export const addAboutContent = () => {
     "items-center",
     "m-auto",
     "max-w-screen-md",
+    "px-6",
     "py-6",
     "sm:py-12",
     "md:py-24",
