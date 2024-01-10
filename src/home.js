@@ -1,3 +1,5 @@
+import hero from "./assets/pexels-cup-of-couple-8472650.jpg";
+
 export const addHomeContent = () => {
   const contentDiv = document.getElementById("content");
   contentDiv.innerHTML = "";
@@ -9,7 +11,7 @@ export const addHomeContent = () => {
           class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]"
         >
           <img
-            src="../src/assets/pexels-cup-of-couple-8472650.jpg"
+            src=${hero}
             width="550"
             height="550"
             alt="Hero"

@@ -1,3 +1,6 @@
+import hiroshi from "./assets/jouwen-wang-5-u7C5gy8r4-unsplash.jpg";
+import yuki from "./assets/pexels-maksim-goncharenok-5506098.jpg";
+
 export const addAboutContent = () => {
   const contentDiv = document.getElementById("content");
   contentDiv.innerHTML = "";
@@ -18,7 +21,7 @@ export const addAboutContent = () => {
   <div class="grid gap-10 sm:px-10 md:grid-cols-2 md:gap-16">
     <div class="flex flex-col items-center space-y-4">
       <img
-        src="/src/assets/about/jouwen-wang-5-u7C5gy8r4-unsplash.jpg"
+        src=${hiroshi}
         width="100"
         height="100"
         alt="Chef Hiroshi"
@@ -36,7 +39,7 @@ export const addAboutContent = () => {
     </div>
     <div class="flex flex-col items-center space-y-4">
       <img
-        src="/src/assets/about/pexels-maksim-goncharenok-5506098.jpg"
+        src=${yuki}
         width="100"
         height="100"
         alt="Yuki Tanaka"

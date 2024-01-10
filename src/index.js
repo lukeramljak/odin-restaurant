@@ -2,6 +2,7 @@ import { addAboutContent } from "./about";
 import { addHomeContent } from "./home";
 import { addMenuContent } from "./menu";
 import { addContactContent } from "./contact";
+import "./output.css";
 
 addHomeContent();
 
