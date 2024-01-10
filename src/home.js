@@ -2,21 +2,41 @@ export const addHomeContent = () => {
   const contentDiv = document.getElementById("content");
   contentDiv.innerHTML = "";
 
-  const container = document.createElement("section");
-  container.className = "home-container";
-
-  container.innerHTML = `
-    <div class="hero">
-      <h1>Savour the Soul of Japan</h1>
-      <p>Indulge in a Symphony of Flavors with Handcrafted Noodles, Rich Broths, and Irresistible Toppings – Your Culinary Journey Begins Here!</p>
-      <button class="btn">Place Order</button>
-    </div>
-    <div>
-      <h2>Welcome to Ramen House</h2>
-      <p>At Ramen House, we invite you on a culinary journey through the heart of Japan, where each bowl is a celebration of tradition and flavor. Step into our cozy haven and experience the artistry of ramen, crafted with passion and served with warmth.</p>
-      <p>Dive into a world of tantalizing choices, from the rich and savory Hakata Classic Tonkotsu Ramen to the bold and spicy Karai Miso Temptation. Our menu is a symphony of tastes, each dish carefully curated to satisfy the most discerning palates. Whether you're a ramen connoisseur or a first-time adventurer, there's a bowl that awaits your discovery.</p>
-    </div>
+  contentDiv.innerHTML = `
+    <section class="max-w-6xl m-auto py-6 sm:py-16">
+      <div class="px-4 md:px-6">
+        <div
+          class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]"
+        >
+          <img
+            src="../src/assets/pexels-cup-of-couple-8472650.jpg"
+            width="550"
+            height="550"
+            alt="Hero"
+            class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+          />
+          <div class="flex flex-col justify-center space-y-4">
+            <div class="space-y-2">
+              <h1
+                class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+              >
+                Welcome to Ramen House
+              </h1>
+              <p class="max-w-[600px] text-gray-500 md:text-xl">
+                Experience the authentic taste of traditional Japanese ramen.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 min-[400px]:flex-row">
+              <a
+                class="inline-flex h-10 items-center justify-center rounded-md bg-black px-8 text-sm font-medium text-white shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-800 disabled:pointer-events-none disabled:opacity-50"
+                href="#"
+              >
+                Make a Reservation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   `;
-
-  contentDiv.appendChild(container);
 };

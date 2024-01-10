@@ -4,33 +4,78 @@
     <title>Restaurant</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="../src/output.css" />
     <script src="./bundle.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/1b99563ec5.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
-  <body>
-    <header>
-      <a href="#" class="logo"><img src="/src/assets/logo.png" /></a>
-      <nav>
-        <ul>
-          <li>
-            <a href="#" id="home"><i class="fa-solid fa-house"></i>Home</a>
-          </li>
-          <li>
-            <a href="#" id="menu"><i class="fa-solid fa-book-open"></i>Menu</a>
-          </li>
-          <li>
-            <a href="#" id="about"
-              ><i class="fa-solid fa-circle-question"></i>About</a
-            >
-          </li>
-        </ul>
+  <body class="flex flex-col min-h-screen bg-white">
+    <header class="px-4 lg:px-6 h-16 flex items-center">
+      <a id="logo" class="flex items-center justify-center" href="#"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-6 w-6"
+        >
+          <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"></path>
+          <path d="M7 21h10"></path>
+          <path d="M19.5 12 22 6"></path>
+          <path
+            d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62"
+          ></path>
+          <path
+            d="M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62"
+          ></path>
+          <path
+            d="M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62"
+          ></path></svg
+        ><span class="sr-only">Ramen House</span></a
+      >
+      <nav class="ml-auto flex gap-4 sm:gap-6">
+        <a
+          id="home"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          href="#"
+        >
+          Home </a
+        ><a
+          id="menu"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          href="#"
+        >
+          Menu </a
+        ><a
+          id="about"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          href="#"
+        >
+          About Us </a
+        ><a
+          id="contact"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          href="#"
+        >
+          Contact
+        </a>
       </nav>
-      <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
     </header>
-    <div id="content" class="container"></div>
+    <main id="content" class="flex-1"></main>
+    <footer
+      class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t"
+    >
+      <p class="text-xs text-gray-500">© Ramen House. All rights reserved.</p>
+      <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+        <a class="text-xs hover:underline underline-offset-4" href="#">
+          Terms of Service </a
+        ><a class="text-xs hover:underline underline-offset-4" href="#">
+          Privacy
+        </a>
+      </nav>
+    </footer>
   </body>
 </html>
